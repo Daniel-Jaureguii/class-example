@@ -1,0 +1,40 @@
+
+doctype html
+html
+  head
+    style(type='text/css').
+           body {
+           
+                //background-image: url('!{imageURI}');
+                background-size: auto;
+                background-repeat: no-repeat; 
+                height: 300px;
+                text-align:center;
+                color:red;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:30px
+            }
+            div {
+                background-color: lightgrey;
+                width: 400px;
+                border: 25px solid green;
+                padding: 25px;
+                margin: auto;
+                
+            }
+            h1{
+                color: yellow;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+body
+  center
+    img(src=imageURI)
+  h1 Tweets
+  ul
+  div
+      each tweet in tweets
+          h1=tweet.user["screen_name"]
+          li= tweet.text
+          -break
+   #[a(href="twitter") 'Refresh']
+          
